@@ -62,6 +62,12 @@ img{
     margin-right: 20px;
     margin-top: 10px;
 }
+.progress{
+    width: 0;
+    height: 15px;
+    border-radius: 10px;
+
+}
 input{
     height: 50px;
     padding-top: 10px;
@@ -99,13 +105,13 @@ input{
     appearance: none;
     width: 15px;
     height: 15px;
-    border: 2px solid grey;
+    border: 2px solid grey ;
     cursor: pointer;
 }
 .circle-check:checked{
      content: '✓';
      color: white;
-     background-color: #7b8672;
+     background-color: #48A300;
      border-color: #878581;
      display: flex;
      align-items: center;
