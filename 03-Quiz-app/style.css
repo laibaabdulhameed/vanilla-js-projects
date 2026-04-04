@@ -1,0 +1,16 @@
+:root {
+    --bg: #c0cdd3;
+    --card: #b3cbd6;
+    --card-border: #BDC3C7;
+    --heading: #34495E;
+    --question: #4A5969;
+    --btn-bg: #3498DB;
+    --btn-text: #4A5969;
+    --correct: #27AE60;
+    --wrong: #E74C3C;
+    --progress: #2980B9;
+    --progress-track: #BDC3C7;
+    --score-bg: #2980B9;
+    --score-text: #ffffff;
+    --muted: #7F8C8D;
+}
