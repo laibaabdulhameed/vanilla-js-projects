@@ -24,14 +24,70 @@ body{
     background-color: var(--bg);
     font-family:Arial, Helvetica, sans-serif
 }
+/* popup screen */
+.popup{
+    background-color: #3498DB;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup__box{
+    max-width: 300px ;
+    min-height:450px ;
+    border: 2px solid rgb(86, 86, 108);
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.popup__heading{
+    color: var(--heading);
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.popup__text{
+    max-width: 290px;
+    min-height: 2.5rem;
+    font-size:1rem ;
+    margin: 0.5rem;
+    text-align: left;
+    color: var(--question);
+}
+.popup__btn{
+    min-height: 1rem;
+    margin:0 auto ;
+    font-size:1.2rem ;
+    background-color: #BDC3C7;
+    color: #112d3f;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.popup__btn:hover{
+     opacity: 0.85;
+}
+
+
+
+/* quiz screen */
 .quiz__heading{
     color: var(--heading);
     text-align: center;
     padding-top: 5rem;
     margin-bottom: 2rem;
     font-size: 3rem;
+    display: none;
 }
 .quiz__card{
+    display: none;
     max-width: 300px ;
     min-height:450px ;
     border: 2px solid var(--card-border);
@@ -124,5 +180,18 @@ body{
     }
     .quiz__question{
         font-size: 1.6rem;
+    }
+    .popup__heading{
+        font-size: 3rem;
+    }
+    .popup__text{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .popup__box{
+        min-width: 500px;
+    }
+    .popup__btn{
+        margin-left: 200px;
     }
 }
