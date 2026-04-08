@@ -121,6 +121,12 @@ body {
     background-color: var(--progress);
     border-radius: 10px;
 }
+.quiz__topbar{
+    max-width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .quiz__questionNumber {
     height: 2rem;
@@ -135,6 +141,18 @@ body {
     font-weight: bold;
     color: var(--btn-text);
 
+}
+.quiz__timer{
+    display: inline-block;
+    height: 2rem;
+    min-width: 3rem;
+    max-width: 4rem;
+    background-color: var(--btn-bg);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0.2rem;
+    font-weight: bold;
+    margin-top:0.2rem ;
 }
 
 .quiz__question {
@@ -239,6 +257,9 @@ body {
 
     .quiz__question {
         font-size: 1.6rem;
+    }
+    .quiz__timer{
+        margin-left: 18rem;
     }
 
     .popup__heading {
