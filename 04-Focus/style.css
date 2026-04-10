@@ -1,0 +1,27 @@
+:root {
+  /* backgrounds */
+  --bg-base: #0f0f0f;        /* darkest — main page bg */
+  --bg-surface: #161622;     /* slightly lighter — alternate sections */
+  --bg-card: #1e1e2e;        /* cards, nav, CTA section */
+
+  /* accent */
+  --color-accent: #7f77dd;   /* the purple — buttons, highlights */
+  --color-accent-dim: #3c3489; /* darker purple — borders, badges */
+
+  /* text */
+  --text-primary: #ffffff;   /* headings */
+  --text-muted: #888888;     /* descriptions, labels */
+  --text-accent: #7f77dd;    /* accent text — badge, label above h2 */
+
+  /* spacing */
+  --space-sm: 1rem;          
+  --space-md: 2rem;          
+  --space-lg: 4rem;          
+
+  /* shape */
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  /* font */
+  --font-main: 'Inter', sans-serif;
+}
