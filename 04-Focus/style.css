@@ -338,21 +338,49 @@ main {
     background-color: var(--color-accent);
     color: #ffffff;
 }
-#cta button:hover{
+
+#cta button:hover {
     transform: scale(1.1);
 }
-#cta h3{
+
+#cta h3 {
     padding-top: 2rem;
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: bold;
-    
+
 }
-#cta h3 span{
+
+#cta h3 span {
     color: var(--color-accent);
 }
-#cta p{
+
+#cta p {
     color: var(--text-muted);
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+/* footer */
+footer {
+    background-color: var(--bg-base);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.footer__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer__links {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-muted);
+}
+
+footer p {
+    color: var(--text-muted);
 }
