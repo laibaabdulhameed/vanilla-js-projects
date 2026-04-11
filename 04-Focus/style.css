@@ -188,14 +188,14 @@ main {
 
 #how p:nth-child(1) {
     color: var(--color-accent);
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
 }
 
 #how h2 {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: bold;
 }
@@ -248,14 +248,14 @@ main {
 
 #features p:nth-child(1) {
     color: var(--color-accent);
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
 }
 
 #features h2 {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: bold;
 }
@@ -313,4 +313,46 @@ main {
 
 .stat:not(:last-child) {
     border-right: 1px solid var(--text-muted);
+}
+
+/* CTA */
+#cta {
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--bg-card);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cta button {
+    margin-top: 1.5rem;
+    border-radius: var(--radius);
+    height: 3rem;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 12rem;
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+#cta button:hover{
+    transform: scale(1.1);
+}
+#cta h3{
+    padding-top: 2rem;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+}
+#cta h3 span{
+    color: var(--color-accent);
+}
+#cta p{
+    color: var(--text-muted);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
