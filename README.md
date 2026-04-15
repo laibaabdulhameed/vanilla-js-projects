@@ -22,14 +22,30 @@ This repository contains multiple projects ranging from beginner-friendly implem
 
 /projects-folder
 │
-├── project-1/
+├── 01-daily_three/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
 │   └── README.md
 │
-├── project-2/
-│   ├── ...
+├── 02-Cafe-Lumiere/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+|
+├── 03-Quiz-app/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── data.js
+│   └── README.md
+├── 04-Focus/
+│   ├── icons/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
 │
 └── README.md
 
