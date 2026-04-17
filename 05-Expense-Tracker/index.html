@@ -12,10 +12,10 @@
 <body>
     <header>
         <section id="hero">
-            <span class="hero__bagde">✨ Smart money tracking with local storage</span>
+            <span class="hero__badge">✨ Smart money tracking with local storage</span>
             <h1 class="hero__title">Expense Tracker
                 with a beautiful dashboard</h1>
-            <p class="hero__discription">Add income and expenses, filter transactions, edit entries, and keep your
+            <p class="hero__description">Add income and expenses, filter transactions, edit entries, and keep your
                 data saved even after refresh.</p>
         </section>
     </header>
@@ -34,28 +34,33 @@
                 <p class="summary__card--amount">$0</p>
             </article>
         </div>
-        <form id="add-transacation">
+        <form id="add-transaction">
             <h2 class="transaction__title">Add Transaction</h2>
             <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
             <div> <label for="amount">Amount</label>
                 <input type="number" placeholder="Enter Amount" id="amount">
             </div>
-            <div> <label for="type">Type</label>
-                <input type="radio" value="Expense" name="type" id="type">
-                <input type="radio" value="Income" name="type" id="type">
+            <div>
+                <label for="type-expense">Expense</label>
+                <input type="radio" value="expense" name="type" id="type-expense">
+                <label for="type-income">Income</label>
+                <input type="radio" value="income" name="type" id="type-income">
             </div>
-            <div> <label for="categories">Category</label>
-                <input type="radio" value="Food" name="category">
-                <input type="radio" value="Travel" name="category">
-                <input type="radio" value="Bills" name="category">
-                <input type="radio" value="Shopping" name="category">
-                <input type="radio" value="Health" name="category">
-                <input type="radio" value="Education" name="category">
-                <input type="radio" value="Entertainment" name="category">
-                <input type="radio" value="Freelamce" name="category">
-                <input type="radio" value="Salary" name="category">
+            <div>
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="bills">Bills</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                    <option value="education">Education</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="salary">Salary</option>
+                </select>
+            </div>
 
-            </div>
             <div> <label for="date">Date</label>
                 <input type="date" id="transaction-date" name="transaction-date">
             </div>
@@ -65,33 +70,39 @@
 
         <section id="Expense-chart">
             <h2 class="expensechart__title">Expense Chart </h2>
-            <p class="expensechart__discription">A simple pie chart showing expenses by category.</p>
+            <p class="expensechart__description">A simple pie chart showing expenses by category.</p>
             <div class="piechart"></div>
-            <p class="expensechart__discription">Only expense entries are used in the chart.</p>
+            <p class="expensechart__description">Only expense entries are used in the chart.</p>
         </section>
 
         <section id="track-transactions">
             <h2 class="transaction__title">Transaction</h2>
-            <p class="transaction__discription">Filter, search, edit, and delete your saved entries.</p>
+            <p class="transaction__description">Filter, search, edit, and delete your saved entries.</p>
             <input type="search" placeholder="Search by category">
             <div>
                 <label for="filter">Filter by Type</label>
-                <input type="radio" value="All" name="type">
-                <input type="radio" value="Expense only" name="type">
-                <input type="radio" value="Income only" name="type">
-            </div>
-            <div> <label for="categories">Category</label>
-                <input type="radio" value="All categories" name="category">
-                <input type="radio" value="Food" name="category">
-                <input type="radio" value="Travel" name="category">
-                <input type="radio" value="Bills" name="category">
-                <input type="radio" value="Shopping" name="category">
-                <input type="radio" value="Health" name="category">
-                <input type="radio" value="Education" name="category">
-                <input type="radio" value="Entertainment" name="category">
-                <input type="radio" value="Freelamce" name="category">
-                <input type="radio" value="Salary" name="category">
+                <label for="filter-all">All</label>
+                <input type="radio" value="all" name="filter-type" id="filter-all">
 
+                <label for="filter-expense">Expense</label>
+                <input type="radio" value="expense" name="filter-type" id="filter-expense">
+
+                <label for="filter-income">Income</label>
+                <input type="radio" value="income" name="filter-type" id="filter-income">
+            </div>
+            <div>
+                <label for="category">Category</label>
+                <select id="filter-category" name="category">
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="bills">Bills</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                    <option value="education">Education</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="salary">Salary</option>
+                </select>
             </div>
             <div> <label for="date">Date</label>
                 <input type="date" id="filter-date" name="filter-date">
