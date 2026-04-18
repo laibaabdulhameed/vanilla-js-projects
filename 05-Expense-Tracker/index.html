@@ -39,9 +39,10 @@
                 <h2 class="transaction__title">Add Transaction</h2>
                 <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
             </div>
-            <div class="form__group"> <label for="amount ">Amount</label>
+            <div class="form__group"> <label for="amount " class="form__label">Amount</label>
                 <input type="number" placeholder="Enter Amount" id="amount">
             </div>
+            <div class="form__row">
             <div class="form__group">
                 <span class="form__label">Type</span>
                 <div class="form__radio-group">
@@ -53,7 +54,7 @@
                 </div>
             </div>
             <div class="form__group">
-                <label for="category">Category</label>
+                <label for="category" class="form__label">Category</label>
                 <select id="category" name="category">
                     <option value="food">Food</option>
                     <option value="travel">Travel</option>
@@ -66,8 +67,8 @@
                     <option value="salary">Salary</option>
                 </select>
             </div>
-
-            <div class="form__group"> <label for="date-label">Date</label>
+            </div>
+            <div class="form__group"> <label for="date-label" class="form__label">Date</label>
                 <input type="date" id="date-label" name="transaction-date">
             </div>
             <button class="transaction__add">Add Transaction</button>
