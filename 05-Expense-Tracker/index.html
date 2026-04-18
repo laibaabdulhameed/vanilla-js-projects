@@ -14,7 +14,7 @@
         <section id="hero">
             <span class="hero__badge">✨ Smart money tracking with local storage</span>
             <h1 class="hero__title">Expense Tracker <br>
-               with a beautiful dashboard </h1>
+                with a beautiful dashboard </h1>
             <p class="hero__description">Add income and expenses, filter transactions, edit entries, and keep your
                 data saved even after refresh.</p>
         </section>
@@ -35,18 +35,24 @@
             </article>
         </div>
         <form id="add-transaction">
-            <h2 class="transaction__title">Add Transaction</h2>
-            <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
-            <div> <label for="amount">Amount</label>
+            <div class="transaction__header">
+                <h2 class="transaction__title">Add Transaction</h2>
+                <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
+            </div>
+            <div class="form__group"> <label for="amount ">Amount</label>
                 <input type="number" placeholder="Enter Amount" id="amount">
             </div>
-            <div>
-                <label for="type-expense">Expense</label>
-                <input type="radio" value="expense" name="type" id="type-expense">
-                <label for="type-income">Income</label>
-                <input type="radio" value="income" name="type" id="type-income">
+            <div class="form__group">
+                <span class="form__label">Type</span>
+                <div class="form__radio-group">
+                    <input type="radio" value="expense" name="type" id="type-expense">
+                    <label for="type-expense">Expense</label>
+
+                    <input type="radio" value="income" name="type" id="type-income">
+                    <label for="type-income">Income</label>
+                </div>
             </div>
-            <div>
+            <div class="form__group">
                 <label for="category">Category</label>
                 <select id="category" name="category">
                     <option value="food">Food</option>
@@ -61,8 +67,8 @@
                 </select>
             </div>
 
-            <div> <label for="date">Date</label>
-                <input type="date" id="transaction-date" name="transaction-date">
+            <div class="form__group"> <label for="date-label">Date</label>
+                <input type="date" id="date-label" name="transaction-date">
             </div>
             <button class="transaction__add">Add Transaction</button>
 
