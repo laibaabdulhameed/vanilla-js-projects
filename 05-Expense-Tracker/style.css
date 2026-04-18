@@ -77,9 +77,44 @@
     color: var(--muted);
     margin-left: 1rem;
   }
+  /* summary */
+  .summary{
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .summary__card{
+    border: 1px solid var(--bg);
+    border-radius: var(--radius);
+    min-height: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 0.5rem;
+
+ }
+ .summary__title{
+color: var(--muted);
+ }
+ .summary__amount{
+  font-size: 1.5rem;
+  font-weight: bold;
+
+ }
+ .summary__card--balance{
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(34, 197, 94, 0.08));
+ }
+ .summary__card--income{
+   background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(255, 255, 255, 0.03));
+ }
+ .summary__card--expense{
+ background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(255, 255, 255, 0.03));
+ }
 
   /* responsive layout */
   @media (max-width: 786px){
+    /* hero */
     .hero__title{
       font-size: 1.8rem;
       margin: 0.7rem;
@@ -90,5 +125,10 @@
       font-size: 0.8rem;
 
     }
+    /* summary */
+     .summary{
+      grid-template-columns: 1fr;
+      gap: 1rem;
+     }
     
   }
