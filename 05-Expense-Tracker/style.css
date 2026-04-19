@@ -121,7 +121,7 @@
 
   /* add-transaction */
   #add-transaction {
-    max-width: 30rem;
+    max-width: 42rem;
     background-color: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -181,7 +181,7 @@
 
   #add-transaction input:not([type="radio"]) {
     height: 3rem;
-    max-width: 28rem;
+    max-width: 39rem;
     border: 1px solid var(--line);
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.04);
@@ -196,9 +196,10 @@
     font-size: 1rem;
     font-weight: bold;
   }
-   .transaction__add:hover{
-         transform: translateY(-2px);
-   }
+
+  .transaction__add:hover {
+    transform: translateY(-2px);
+  }
 
   .form__row {
     display: flex;
@@ -207,6 +208,70 @@
 
   .form__row .form__group {
     flex: 1;
+  }
+
+  /* track transactions */
+  #track-transactions {
+    max-width: 42rem;
+    background-color: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin: 2rem;
+    padding: 1.5rem;
+  }
+
+  .form__label {
+    margin-top: 1rem;
+  }
+
+  .form__input {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding-left: 0.7rem;
+  }
+
+  .form__select {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding-left: 1rem;
+    cursor: pointer;
+  }
+
+  .transaction__clear {
+    background-color: var(--muted);
+    height: 3rem;
+    width: 10rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .transaction__features {
+    height: 3rem;
+    max-width: 39rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--muted);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    padding-top: 0.9rem;
+
+  }
+
+  .transaction__advice {
+    color: var(--muted);
+    text-align: center;
+    margin-top: 1rem;
   }
 
   /* responsive layout */
@@ -233,14 +298,29 @@
 
     /* add transactipon */
     .form__row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-   .transaction__add {
-    height: 2.5rem;
-    width: 9rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-  }
+      flex-direction: column;
+      gap: 1rem;
+    }
 
+    .transaction__add {
+      height: 2.5rem;
+      width: 9rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    /* track transaction */
+    .transaction__features {
+      flex-direction: column;
+      min-height: 8rem;
+      font-size: 0.8rem;
+      align-items: center;
+      padding-bottom: 1rem;
+    }
+      .transaction__clear {
+      height: 2.5rem;
+      width: 9rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
   }
