@@ -34,47 +34,58 @@
                 <p class="summary__amount">$0</p>
             </article>
         </div>
-        <!-- add -->
-        <form id="add-transaction">
-            <div class="transaction__header">
-                <h2 class="transaction__title">Add Transaction</h2>
-                <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
-            </div>
-            <div class="form__group"> <label for="amount " class="form__label">Amount</label>
-                <input type="number" placeholder="Enter Amount" id="amount">
-            </div>
-            <div class="form__row">
-                <div class="form__group">
-                    <span class="form__label">Type</span>
-                    <div class="form__radio-group">
-                        <input type="radio" value="expense" name="type" id="type-expense">
-                        <label for="type-expense">Expense</label>
+        <div class="main__grid">
+            <!-- add -->
+            <form id="add-transaction">
+                <div class="transaction__header">
+                    <h2 class="transaction__title">Add Transaction</h2>
+                    <p class="transaction__description">Track your income and expenses in a clean, simple form.</p>
+                </div>
+                <div class="form__group"> <label for="amount " class="form__label">Amount</label>
+                    <input type="number" placeholder="Enter Amount" id="amount">
+                </div>
+                <div class="form__row">
+                    <div class="form__group">
+                        <span class="form__label">Type</span>
+                        <div class="form__radio-group">
+                            <input type="radio" value="expense" name="type" id="type-expense">
+                            <label for="type-expense">Expense</label>
 
-                        <input type="radio" value="income" name="type" id="type-income">
-                        <label for="type-income">Income</label>
+                            <input type="radio" value="income" name="type" id="type-income">
+                            <label for="type-income">Income</label>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="category" class="form__label">Category</label>
+                        <select id="category" name="category">
+                            <option value="food">Food</option>
+                            <option value="travel">Travel</option>
+                            <option value="bills">Bills</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="health">Health</option>
+                            <option value="education">Education</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="salary">Salary</option>
+                        </select>
                     </div>
                 </div>
-                <div class="form__group">
-                    <label for="category" class="form__label">Category</label>
-                    <select id="category" name="category">
-                        <option value="food">Food</option>
-                        <option value="travel">Travel</option>
-                        <option value="bills">Bills</option>
-                        <option value="shopping">Shopping</option>
-                        <option value="health">Health</option>
-                        <option value="education">Education</option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="freelance">Freelance</option>
-                        <option value="salary">Salary</option>
-                    </select>
+                <div class="form__group"> <label for="date-label" class="form__label">Date</label>
+                    <input type="date" id="date-label" name="transaction-date">
                 </div>
-            </div>
-            <div class="form__group"> <label for="date-label" class="form__label">Date</label>
-                <input type="date" id="date-label" name="transaction-date">
-            </div>
-            <button class="transaction__add">Add Transaction</button>
+                <button class="transaction__add">Add Transaction</button>
 
-        </form>
+            </form>
+
+            <!-- piechart -->
+            <section id="expense-chart">
+                <h2 class="expensechart__title">Expense Chart </h2>
+                <p class="expensechart__description">A simple pie chart showing expenses by category.</p>
+                <div class="piechart"></div>
+                <p class="expensechart__description">Only expense entries are used in the chart.</p>
+            </section>
+        </div>
+
         <!-- track -->
         <section id="track-transactions">
             <div class="transaction__header">
@@ -130,12 +141,7 @@
             <p class="transaction__advice">No transactions found. Add one to get started.</p>
 
         </section>
-        <section id="Expense-chart">
-            <h2 class="expensechart__title">Expense Chart </h2>
-            <p class="expensechart__description">A simple pie chart showing expenses by category.</p>
-            <div class="piechart"></div>
-            <p class="expensechart__description">Only expense entries are used in the chart.</p>
-        </section>
+
 
 
     </main>
