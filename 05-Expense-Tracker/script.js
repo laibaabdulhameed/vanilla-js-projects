@@ -85,5 +85,26 @@ function renderSummary() {
     income.textContent = `$${totalIncome}`;
     expense.textContent = `$${totalexpense}`;
     totalBalance.textContent = `$${balance}`;
+    renderList();
 }
 
+function renderList(){
+    const list = document.querySelector('#transaction-list');
+    if(transactions.length === 0){
+        list.innerHTML = '';
+        document.querySelector('#empty-state').style.display = 'block';
+        return;
+    }
+     document.querySelector('#empty-state').style.display = 'none';
+
+     list.innerHTML = transactions.map(t => {
+        return`
+        <div class="transaction__entry">
+        <span>${t.category}</span>
+        <span class="transaction__entry--${t.type}">${t.type}</span>
+        <span>${t.type === 'income' ? '+' : '-'}$${t.amount}</span>
+        <span>${t.date}</span>
+         <button type="button"  class="btn--delete" onclick="deleteTransaction(${t.id})">🗑</button>
+        </div>
+`}).join('');
+}
