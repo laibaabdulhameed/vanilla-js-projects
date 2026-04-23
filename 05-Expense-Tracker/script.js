@@ -78,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // render
+
+
 function renderSummary() {
     const totalIncome = transactions.filter(t => t.type === 'income').reduce((sum, t) => sum + t.amount, 0)
     const totalexpense = transactions.filter(t => t.type === 'expense').reduce((sum, t) => sum + t.amount, 0)
@@ -107,4 +109,16 @@ function renderList(){
          <button type="button"  class="btn--delete" onclick="deleteTransaction(${t.id})">🗑</button>
         </div>
 `}).join('');
+}
+
+function render() {
+  renderSummary();
+  renderList();
+} 
+
+// deletetransition
+function  deleteTransaction(id){
+    transactions = transactions.filter(t => t.id !== id);
+    saveToStorage();
+    render();
 }
