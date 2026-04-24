@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+</head>
+
+<body>
+    <header>
+        <div class="weather__search">
+            <input type="text" placeholder=" Search city or coordinates...">
+            <button class="search">SEARCH</button>
+        </div>
+    </header>
+    <main>
+        <section id="status">
+            <article class="status--loading">LOADING</article>
+            <article class="status--succees">SUCCEES</article>
+            <article class="status--error ">ERROR </article>
+        </section>
+        <section id="dashboard">
+            <p class="dashboard__description">CURRENT LOCATION</p>
+            <h1 class="dashboard__title">Lahore</h1>
+            <p class="dashboard__description">Friday, April 24 · 14:32 PKT · Pakistan</p>
+            <span class="dashboard__temperature">28</span>
+            <span class="temperature__C">°C</span>
+            <img src="" alt="imge">
+            <p class="weather__signal">Partly Cloudy</p>
+            <p class="dashboard__description">Feels like 31°C · High 33° · Low 22°</p>
+            <div class="weather">
+                <div class="weather__status">
+                    <h4>62%</h4>
+                    <p>HUMIDITY</p>
+                </div>
+                <div class="weather__status">
+                    <h4>14</h4>
+                    <p>WIND km/h</p>
+                </div>
+                <div class="weather__status">
+                    <h4>1012</h4>
+                    <p>PRESSURE</p>
+                </div>
+                <div class="weather__status">
+                    <h4>12km</h4>
+                    <p>VISIBILITY</p>
+                </div>
+            </div>
+        </section>
+        <section id="forecast">
+            <!-- 5dayforecast -->
+            <p class="forecast__title">5-DAY FORECAST</p>
+            <div class="forecast__row">
+                <div class="forecast__card">
+                    <div class="forecast__day">TODAY</div>
+                    <div class="forecast__icon">⛅</div>
+                    <div class="forecast__high">32</div>
+                    <div class="forecast__low">22</div>
+                </div>
+                <div class="forecast__card">
+                    <div class="forecast__day">SATURDAY</div>
+                    <div class="forecast__icon">⛅</div>
+                    <div class="forecast__high">35</div>
+                    <div class="forecast__low">24</div>
+                </div>
+                <div class="forecast__card">
+                    <div class="forecast__day">SUNDAY</div>
+                    <div class="forecast__icon">⛅</div>
+                    <div class="forecast__high">32</div>
+                    <div class="forecast__low">21</div>
+                </div>
+                <div class="forecast__card">
+                    <div class="forecast__day">MONDAY</div>
+                    <div class="forecast__icon">⛅</div>
+                    <div class="forecast__high">27</div>
+                    <div class="forecast__low">19</div>
+                </div>
+                <div class="forecast__card">
+                    <div class="forecast__day">TUESDAY</div>
+                    <div class="forecast__icon">⛅</div>
+                    <div class="forecast__high">26</div>
+                    <div class="forecast__low">18</div>
+                </div>
+            </div>
+            <!-- info strip -->
+            <div class="info-strip">
+                <div class="info-tile">
+                    <div class="info-tile-lbl">AIR QUALITY INDEX</div>
+                    <div class="info-tile-val">72</div>
+                    <div class="aqi-bar">
+                        <div class="aqi-thumb"></div>
+                    </div>
+                    <div class="info-tile-desc">Moderate</div>
+                </div>
+                <div class="info-tile">
+                    <div class="info-tile-lbl">UV INDEX</div>
+                    <div class="info-tile-val">8</div>
+                    <div class="aqi-bar">
+                        <div class="aqi-thumb"></div>
+                    </div>
+                    <div class="info-tile-desc">Very High</div>
+                </div>
+            </div>
+            <div >
+                <div class="info-tile" >
+                    <div class="info-tile-lbl">SUNRISE</div>
+                    <div >05:41</div>
+                    <div class="info-tile-desc">AM</div>
+                </div>
+                <div class="info-tile" >
+                    <div class="info-tile-lbl">SUNSET</div>
+                    <div >19:08</div>
+                    <div class="info-tile-desc">PM</div>
+                </div>
+                <div class="info-tile" >
+                    <div class="info-tile-lbl">DEW POINT</div>
+                    <div >21°C</div>
+                    <div class="info-tile-desc" >Humid</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+         <div class="updated">Updated 2 min ago · OpenWeatherMap API</div>
+    </footer>
+
+</body>
+
+</html>
