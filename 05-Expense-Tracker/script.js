@@ -90,17 +90,18 @@ function renderSummary() {
     renderList();
 }
 
-function renderList(){
+function renderList() {
     const list = document.querySelector('#transaction-list');
-    if(transactions.length === 0){
+    const filtered = filterTransactions();
+    if (filtered.length === 0) {
         list.innerHTML = '';
         document.querySelector('#empty-state').style.display = 'block';
         return;
     }
-     document.querySelector('#empty-state').style.display = 'none';
+    document.querySelector('#empty-state').style.display = 'none';
 
-     list.innerHTML = transactions.map(t => {
-        return`
+    list.innerHTML = filtered.map(t => {
+        return `
         <div class="transaction__entry">
         <span>${t.category}</span>
         <span class="transaction__entry--${t.type}">${t.type}</span>
@@ -109,16 +110,53 @@ function renderList(){
          <button type="button"  class="btn--delete" onclick="deleteTransaction(${t.id})">🗑</button>
         </div>
 `}).join('');
+
+
 }
 
 function render() {
-  renderSummary();
-  renderList();
-} 
+    renderSummary();
+    renderList();
+}
 
 // deletetransition
-function  deleteTransaction(id){
+function deleteTransaction(id) {
     transactions = transactions.filter(t => t.id !== id);
     saveToStorage();
     render();
 }
+// filter
+function filterTransactions() {
+    const typeFilter = document.querySelector('input[name="filter-type"]:checked');
+    const categoryFilter = document.querySelector('#filter-category').value;
+    const searchFilter = document.querySelector('input[type="search"]').value.toLowerCase();
+
+    let filtered = transactions;
+    if (typeFilter && typeFilter.value !== 'all') {
+        filtered = filtered.filter(t => t.type=== typeFilter.value)
+    }
+    if (categoryFilter !== 'all') {
+        filtered = filtered.filter(t => t.category === categoryFilter)
+    }
+    if (searchFilter) {
+        filtered = filtered.filter(t => t.category.includes(searchFilter))
+    }
+    
+    return filtered;
+
+}
+document.querySelector('input[type="search"]').addEventListener('input', render);
+    document.querySelectorAll('input[name="filter-type"]').forEach(r => {
+        r.addEventListener('change', render);
+    });
+    document.querySelector('#filter-category').addEventListener('change', render);
+
+// clearfilter
+function clearFilter() {
+    document.querySelector('input[type="search"]').value = '';
+    document.querySelector('#filter-category').value = 'all';
+    document.querySelector('#filter-all').checked = true;
+    
+    render();
+}
+document.querySelector('.transaction__clear').addEventListener('click', clearFilter);
