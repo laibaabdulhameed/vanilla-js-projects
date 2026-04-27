@@ -44,7 +44,7 @@ function addTransactions(e) {
     //  push
     transactions.push(newTransctions);
     saveToStorage();
-    renderSummary();
+    render();
     addamount.value = '';
     adddate.value = '';
     document.querySelectorAll('input[name="type"]').forEach(r => r.checked = false);
@@ -87,7 +87,7 @@ function renderSummary() {
     income.textContent = `$${totalIncome}`;
     expense.textContent = `$${totalexpense}`;
     totalBalance.textContent = `$${balance}`;
-    renderList();
+    // renderList();
 }
 
 function renderList() {
@@ -117,6 +117,7 @@ function renderList() {
 function render() {
     renderSummary();
     renderList();
+    renderchart();
 }
 
 // deletetransition
@@ -133,7 +134,7 @@ function filterTransactions() {
 
     let filtered = transactions;
     if (typeFilter && typeFilter.value !== 'all') {
-        filtered = filtered.filter(t => t.type=== typeFilter.value)
+        filtered = filtered.filter(t => t.type === typeFilter.value)
     }
     if (categoryFilter !== 'all') {
         filtered = filtered.filter(t => t.category === categoryFilter)
@@ -141,22 +142,59 @@ function filterTransactions() {
     if (searchFilter) {
         filtered = filtered.filter(t => t.category.includes(searchFilter))
     }
-    
+
     return filtered;
 
 }
 document.querySelector('input[type="search"]').addEventListener('input', render);
-    document.querySelectorAll('input[name="filter-type"]').forEach(r => {
-        r.addEventListener('change', render);
-    });
-    document.querySelector('#filter-category').addEventListener('change', render);
+document.querySelectorAll('input[name="filter-type"]').forEach(r => {
+    r.addEventListener('change', render);
+});
+document.querySelector('#filter-category').addEventListener('change', render);
 
 // clearfilter
 function clearFilter() {
     document.querySelector('input[type="search"]').value = '';
     document.querySelector('#filter-category').value = 'all';
     document.querySelector('#filter-all').checked = true;
-    
+
     render();
 }
 document.querySelector('.transaction__clear').addEventListener('click', clearFilter);
+
+// renderchart
+let chartInstance = null;
+function renderchart() {
+    const expensebycategory = transactions.filter(t => t.type === 'expense')
+        .reduce((acc, t) => {
+            acc[t.category] = (acc[t.category] || 0) + t.amount;
+            return acc;
+        }, {});
+
+    console.log('labels:', Object.keys(expensebycategory));
+    console.log('data:', Object.values(expensebycategory));
+
+    const labels = Object.keys(expensebycategory);
+    const data = Object.values(expensebycategory);
+    const canvas = document.querySelector('#expense-chart-canvas');
+
+    if (labels.length === 0) return;
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    chartInstance = new Chart(canvas, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: [
+                    '#8b5cf6', '#22c55e', '#ef4444',
+                    '#f59e0b', '#3b82f6', '#ec4899',
+                    '#14b8a6', '#f97316', '#6366f1'
+                ]
+            }]
+        }
+    });
+}

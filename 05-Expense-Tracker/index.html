@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -81,7 +82,9 @@
             <section id="expense-chart">
                 <h2 class="expensechart__title">Expense Chart </h2>
                 <p class="expensechart__description">A simple pie chart showing expenses by category.</p>
-                <div class="piechart"></div>
+                <div class="piechart"> 
+                      <canvas id="expense-chart-canvas"></canvas>
+                </div>
                 <p class="expensechart__description">Only expense entries are used in the chart.</p>
             </section>
         </div>
@@ -110,7 +113,7 @@
                 <div class="form__group">
                     <label class="form__label" for="filter-category">Category</label>
                     <select class="form__select" id="filter-category" name="category">
-                          <option value="all">All Categories</option>
+                        <option value="all">All Categories</option>
                         <option value="food">Food</option>
                         <option value="travel">Travel</option>
                         <option value="bills">Bills</option>
