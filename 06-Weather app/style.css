@@ -645,3 +645,24 @@ body {
 .warning-text {
   color: var(--warn);
 }
+@media (max-width: 380px) {
+  .app {
+    padding-inline: 0.75rem;
+  }
+
+  .temp-big {
+    font-size: 4.5rem;
+  }
+
+  .weather-svg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .stats-row,
+  .forecast-row,
+  .info-strip,
+  .mini-info-row {
+    gap: 0.45rem;
+  }
+}
