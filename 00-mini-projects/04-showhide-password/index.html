@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show or Hide pasword</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 8px 12px;
+            width: 300px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 16px;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #555;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+
+
+<body>
+    <div>
+        <input id="password" type="password" placeholder="Enter the pasword...">
+        <button id="toggle-btn">
+            <i class="fa-solid fa-eye" id="eye-icon"></i>
+        </button>
+    </div>
+</body>
+
+</html>
