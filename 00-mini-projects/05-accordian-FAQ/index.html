@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordian FAQ</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        #faqs {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .faq {
+            background: white;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+        }
+
+        .question {
+            font-size: 16px;
+            color: #222;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 12px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .faq.active .answer {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div id="faqs">
+    <div class="faq faq1">
+        <h3 class="question">Is this therapy?</h3>
+        <p class="answer">No. AeonAnima doesn't heal you. It shows you what's already there — clearly, without
+            softening it. If you need a therapist, see a therapist. AeonAnima is the thing you use to understand
+            what you'd even say to one.</p>
+    </div>
+    <div class="faq faq2">
+        <h3 class="question">How is this different from ChatGPT?</h3>
+        <p class="answer">ChatGPT knows everything about the world. AeonAnima knows one thing — you. It can't answer
+            from your answers if it doesn't have them. The more you share, the more precise it gets. ChatGPT starts
+            fresh every time. AeonAnima never does.</p>
+    </div>
+    <div class="faq faq3">
+        <h3 class="question">Is my data private?</h3>
+        <p class="answer">Your answers never train other models. They belong to your portrait only. We use
+            end-to-end encryption and your reflections are used solely to power your personal AeonAnima — nothing
+            else.</p>
+    </div>
+</div>
+
+</html>
