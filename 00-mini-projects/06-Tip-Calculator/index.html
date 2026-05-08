@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script src="script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        label{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+
+        }
+        button{
+            padding: 12px;
+            color: white;
+            background: cadetblue;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p{
+            font-size: 14px;
+            color: #555;
+        }
+        span{
+            font-width: bold;
+            font-size: 18px;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="bill"> Bill</label>
+            <input type="number" id="bill">
+        </div>
+        <div>
+            <label for="tip">Tip</label>
+            <input type="number" id="tip">
+        </div>
+        <div>
+            <p id="total">Total bill:</p>
+            <span id="total-amount">0$</span>
+        </div>
+        <div>
+            <label for="people">number of people</label>
+            <input type="number" id="people">
+        </div>
+        <div>
+            <p id="forOne">Per person:</p>
+            <span id="per-person">0$</span>
+        </div>
+        <button type="button" id="button">Calculate</button>
+    </form>
+</body>
+
+</html>
