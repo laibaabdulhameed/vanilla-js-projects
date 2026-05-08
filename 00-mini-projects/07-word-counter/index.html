@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter</title>
+    <script src="script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #f0f0f0;
+        }
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             flex-direction: column;
+
+        }
+        textarea{
+            min-height: 150px;
+            max-width: 500px;
+            margin-top: 150px;
+         }
+         small{
+            display: inline-block;
+         }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <textarea id="word-counter" placeholder="write your thoughts..."></textarea>
+        <small>Total words: <span id="words">0</span></small>
+    </div>
+    
+</body>
+</html>
