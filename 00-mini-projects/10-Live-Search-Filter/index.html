@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search Filter</title>
+    <script src="script.js" defer></script>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+         #main{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+         }
+                
+        .items div{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+           <input type="text" id="input" placeholder="enter the item">
+           <div id="items"></div>
+    </div> 
+    
+</body>
+</html>
