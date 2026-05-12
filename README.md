@@ -21,7 +21,7 @@ This repository contains multiple projects ranging from beginner-friendly implem
 📁 Folder Structure
 
 /projects-folder
-│
+│── 00-mini-projects/
 ├── 01-daily_three/
 │   ├── index.html
 │   ├── style.css
