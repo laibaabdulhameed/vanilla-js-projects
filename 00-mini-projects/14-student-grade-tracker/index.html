@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Tracker</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.student {
+    background: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.student span {
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.result {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+.result span {
+    font-weight: bold;
+    color: #222;
+}
+
+.passed, .failed {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.passed {
+    background: #eafaf1;
+    color: #2ecc71;
+}
+
+.failed {
+    background: #fdf0f0;
+    color: #e74c3c;
+}
+    </style>
+</head>
+
+<body>
+    <div class="list"></div>
+    <div class="result">
+        <span class="average"></span>
+        <span class="highest"></span>
+        <span class="lowest"></span>
+        <div class="passed"></div>
+        <div class="failed"></div>
+    </div>
+
+</body>
+
+</html>
