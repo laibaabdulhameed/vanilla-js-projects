@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Loader</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        button {
+            padding: 12px;
+            width: 150px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        .loading-msg {
+            text-align: center;
+            color: #888;
+            font-size: 15px;
+        }
+
+        .joke,
+        .fact,
+        .image {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .joke h3,
+        .fact h3,
+        .image h3 {
+            color: #555;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .joke p,
+        .image p {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #dog-img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button class="fetch">Fetch Everything</button>
+        <div class="joke">
+            <h3>Joke</h3>
+            <p id="joke-text"></p>
+        </div>
+        <div class="fact">
+            <h3>Fact</h3>
+            <p id="country-fact"></p>
+        </div>
+        <div class="image">
+            <h3>Image</h3>
+            <img src="" alt="" id="dog-image">
+        </div>
+    </div>
+    <div class="loading-msg"></div>
+</body>
+
+</html>
