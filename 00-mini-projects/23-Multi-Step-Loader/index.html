@@ -41,10 +41,19 @@
             margin: 0 auto;
         }
 
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
         .loading-msg {
-            text-align: center;
+            /* text-align: center; */
             color: #888;
-            font-size: 15px;
+            font-size: 25px;
+          
+           
         }
 
         .joke,
@@ -79,7 +88,8 @@
             width: 100%;
             border-radius: 8px;
             object-fit: cover;
-            height: 250px;
+            height: 50px;
+         
         }
     </style>
 </head>
@@ -100,7 +110,10 @@
             <img src="" alt="" id="dog-image">
         </div>
     </div>
-    <div class="loading-msg"></div>
+    <div class="loading-container">
+             <p class="loading-msg"></p>
+    </div>
+
 </body>
 
 </html>
