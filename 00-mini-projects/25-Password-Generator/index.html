@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .main {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #222;
+        }
+
+        .conditions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .uppercase,
+        .lowercase,
+        .numbers,
+        .specialchar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            color: #444;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .generate {
+            padding: 12px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .pasword-display {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            word-break: break-all;
+            min-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Password Generator</h1>
+        <div class="conditions">
+            <div class="uppercase">
+                <label for="upper">UpperCase(A-Z)</label>
+                <input type="checkbox" id="upper">
+            </div>
+            <div class="lowercase">
+                <label for="lower">LpperCase(a-z)</label>
+                <input type="checkbox" id="lower">
+            </div>
+            <div class="numbers">
+                <label for="num">Numbers(0-9)</label>
+                <input type="checkbox" id="num">
+            </div>
+            <div class="specialchar">
+                <label for="special">Special Characters(!@#$...)</label>
+                <input type="checkbox" id="special">
+            </div>
+            <input type="number" placeholder="Password length" id="length">
+        </div>
+        <button class="generate">Generate</button>
+        <div id="result"></div>
+
+    </div>
+</body>
+
+</html>
