@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Checker</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .main {
+            background-color: white;
+            width: 100%;
+            max-width: 460px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            min-height: 200px;
+            border-radius: 12px;
+        }
+
+        #textDiv {
+            min-height: 100px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+        h4{
+            text-align: center;
+             text-decoration: underline;
+            color: #222;
+        }
+        p{
+            padding: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Typing Speed Checker</h1>
+        <div class="targeted-text">
+            <h4>Targeted Text</h4>
+             <p id="paragraph">
+                "The quick brown fox jumps over the lazy dog near the bank on a a bright sunny
+            morning while birds sing softly in the trees above"
+             </p> </div>
+        <textarea id="textDiv"></textarea>
+        <span id="time"></span>
+    </div>
+</body>
+
+</html>
