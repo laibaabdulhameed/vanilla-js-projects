@@ -9,6 +9,7 @@ btn.addEventListener('click', () => {
     // conditions
      if(bill<=0 || tip<=0 || people<=0){
         alert("Please enter valid Number.")
+        return ;
     }
     let tipAmount = bill * tip / 100;
     let totalAmount = tipAmount + bill;
@@ -16,7 +17,4 @@ btn.addEventListener('click', () => {
     // perPerson
     let  per = totalAmount/people;
     perPerson.textContent= `$${per}`;
-    
-    
-
 })

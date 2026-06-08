@@ -18,7 +18,7 @@ for (let i = 1; i < 80; i++) {
     star.style.animationDelay = Math.random() * 3 + 's';
     stars.appendChild(star);
 }
-// stats handling
+// stats handling6
 function showStat(state) {
     loading.classList.remove('visible');
     success.classList.remove('visible');
@@ -81,4 +81,7 @@ function displayWeather(data) {
     
 }
 
-
+// day forecast
+function dayForecast(data) {
+    
+}

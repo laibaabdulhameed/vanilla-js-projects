@@ -46,7 +46,17 @@ This repository contains multiple projects ranging from beginner-friendly implem
 │   ├── style.css
 │   ├── script.js
 │   └── README.md
-│
+├── 05-Expense Tracker/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+|__06-Weather App/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+|   
 └── README.md
 
 ---
