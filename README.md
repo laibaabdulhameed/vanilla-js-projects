@@ -52,9 +52,9 @@ This repository contains multiple projects ranging from beginner-friendly implem
 │   ├── script.js
 │   └── README.md
 |__06-Weather App/
-├── index.html
-├── style.css
-├── script.js
+|  |__ index.html
+|  ├──style.css
+|  ├── script.js
 └── README.md
 |   
 └── README.md
